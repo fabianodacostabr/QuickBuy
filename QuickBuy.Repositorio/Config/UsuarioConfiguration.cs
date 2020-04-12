@@ -28,10 +28,10 @@ namespace QuickBuy.Repositorio.Config
                .IsRequired()
                .HasMaxLength(100);
 
-            builder
+            /*builder
                 .Property(u => u.Email)
                 .IsRequired()
-                .HasMaxLength(100);
+                .HasMaxLength(100);*/
 
             builder
                .Property(u => u.Senha)

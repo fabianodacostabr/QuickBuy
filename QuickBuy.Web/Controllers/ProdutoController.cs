@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QuickBuy.Web.Controllers
 {
-    [Route("api/[Controller]")]
+    [Route("api/[controller]")]
     public class ProdutoController : Controller
     {
         private readonly IProdutoRepositorio _produtoRepositorio;
