@@ -45,4 +45,19 @@ export class UsuarioServico {
     return this.http.post<Usuario>(this.baseURL + "api/usuario/VerificarUsuario", body, { headers });
   }
 
+  public cadastrarUsuario(usuario: Usuario): Observable<Usuario> {
+
+    const headers = new HttpHeaders().set('content-type', 'application/json');
+    var body =
+    {
+      email: usuario.email,
+      senha: usuario.senha,
+      nome: usuario.nome,
+      sobrenome: usuario.sobreNome
+    }
+
+    return this.http.post<Usuario>(this.baseURL + "api/usuario", body, { headers });
+
+  }
+
 }
