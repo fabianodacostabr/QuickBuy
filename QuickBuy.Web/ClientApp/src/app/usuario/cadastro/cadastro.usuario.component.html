@@ -67,14 +67,18 @@
       </div>
     </div>
 
-    <button class="btn btn-primary btn-block" type="submit" (click)="cadastrar()" [disabled]="_ativar_spinner">
-      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="_ativar_spinner"></span>
+    <button class="btn btn-primary btn-block" type="submit" (click)="cadastrar()" [disabled]="ativar_spinner">
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="ativar_spinner"></span>
       Cadastrar
     </button>
-    <div><a [routerLink]='["/entrar"]' ><=Voltar</a></div>
+    <div><a [routerLink]='["/entrar"]'><=Voltar</a></div>
 
     <div class="alert alert-danger" *ngIf="mensagem">
       {{mensagem}}
+    </div>
+
+    <div class="alert alert-success" *ngIf="usuarioCadastrado">
+      Usuário Cadastrado com sucesso! <a class="alert-link" [routerLink]='["/entrar"]'> Clique aqui</a> para entrar no sistema com a sua conta.
     </div>
 
     <img src="../../../assets/img/quickbuy-logo.jpg" title="QuickBy Web" />
